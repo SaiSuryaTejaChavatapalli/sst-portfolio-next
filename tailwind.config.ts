@@ -79,6 +79,8 @@ module.exports = {
       backgroundImage: {
         dots_light: "url(/work/dots-light.svg)",
         dots_dark: "url(/work/dots-dark.svg)",
+        contact_illustration_light: "url(/contact/illustration-light.svg)",
+        contact_illustration_dark: "url(/contact/illustration-dark.svg)",
       },
     },
   },
