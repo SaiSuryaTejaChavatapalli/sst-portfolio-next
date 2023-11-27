@@ -50,7 +50,7 @@ const qualificationData = [
       {
         university: "Rajiv Gandhi University of Knowledge Technologies",
         qualification: "Pre University Course",
-        years: "2017-2018",
+        years: "2016-2018",
       },
       {
         university: "Rajiv Gandhi University of Knowledge Technologies",
@@ -65,7 +65,7 @@ const qualificationData = [
       {
         company: "Persistent Systems",
         role: "Software Engineer",
-        years: "2022-present",
+        years: "July 2022-present",
       },
     ],
   },
@@ -255,7 +255,57 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                <TabsContent value="skills">Skills Info</TabsContent>
+                <TabsContent value="skills">
+                  <div className="text-center xl:text-left">
+                    <h3 className="h3 mb-8">What I Use Everyday</h3>
+                    <div className="mb-16">
+                      <h4 className="text-xl font-semibold mb-2">Skills</h4>
+                      <div className="border-b border-border mb-4"></div>
+                      {/*skills list */}
+                      <div>
+                        {getData(skillsData, "skills").data.map(
+                          (item, index) => {
+                            const { name } = item;
+                            return (
+                              <div
+                                key={index}
+                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                              >
+                                <div className="font-medium">{name}</div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    </div>
+                    {/* tools */}
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 xl:text-left">
+                        Tools
+                      </h3>
+                      <div className="border-b border-border mb-4"></div>
+                      {/* tools list */}
+                      <div className="flex gap-x-8 justify-center xl:justify-start">
+                        {getData(skillsData, "tools").data.map(
+                          (item, index) => {
+                            const { imgPath } = item;
+                            return (
+                              <div key={index}>
+                                <Image
+                                  src={imgPath}
+                                  alt="skills-img"
+                                  width={48}
+                                  height={48}
+                                  priority
+                                />
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
               </div>
             </Tabs>
           </div>
