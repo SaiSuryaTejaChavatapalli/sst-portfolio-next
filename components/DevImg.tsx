@@ -1,5 +1,9 @@
 import Image from "next/image";
-const DevImg = ({ containerStyles, imgSrc }) => {
+type DevImgProps = {
+  containerStyles: React.ComponentProps<"div">["className"];
+  imgSrc: string;
+};
+const DevImg = ({ containerStyles, imgSrc }: DevImgProps) => {
   return (
     <div className={`${containerStyles}`}>
       <Image

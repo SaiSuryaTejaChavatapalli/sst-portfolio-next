@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type } from "os";
 
 const links = [
   { id: 1, path: "/", name: "home" },

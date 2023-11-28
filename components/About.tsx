@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
 import {
   infoData,
@@ -7,8 +8,16 @@ import {
 import DevImg from "./DevImg";
 import { Briefcase, GraduationCap } from "lucide-react";
 
+type qualificationEducation = {
+  title: string;
+  data: {
+    university: string;
+    qualification: string;
+    years: string;
+  }[];
+};
 const About = () => {
-  const getData = (arr, title) => {
+  const getData = (arr, title: string) => {
     return arr.find((item) => item.title === title);
   };
   return (

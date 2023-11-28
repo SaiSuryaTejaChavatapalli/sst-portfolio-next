@@ -3,7 +3,18 @@ import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
-const ProjectCard = ({ project }) => {
+
+type ProjectCardProps = {
+  project: {
+    image: string;
+    link: string;
+    github: string;
+    category: string;
+    name: string;
+    description: string;
+  };
+};
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Card className="group overflow-hidden relative">
       <CardHeader className="p-0">
