@@ -8,9 +8,23 @@ import {
   Calendar,
   Briefcase,
 } from "lucide-react";
-import Image from "next/image";
+import { FaGit, FaGithub } from "react-icons/fa";
 import DevImg from "./DevImg";
-
+import {
+  RiHtml5Fill,
+  RiCss3Fill,
+  RiReactjsFill,
+  RiJavascriptFill,
+} from "react-icons/ri";
+import { TbBrandNextjs, TbSql } from "react-icons/tb";
+import {
+  BiLogoRedux,
+  BiLogoMongodb,
+  BiLogoVisualStudio,
+  BiLogoPython,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+} from "react-icons/bi";
 const infoData = [
   {
     icon: <User2 size={20} />,
@@ -43,9 +57,9 @@ const qualificationData = [
     title: "education",
     data: [
       {
-        university: "ZPP High School",
-        qualification: "10 th Standard",
-        years: "2015-2016",
+        university: "Rajiv Gandhi University of Knowledge Technologies",
+        qualification: "Bachelor of Technology",
+        years: "2018-2022",
       },
       {
         university: "Rajiv Gandhi University of Knowledge Technologies",
@@ -53,9 +67,9 @@ const qualificationData = [
         years: "2016-2018",
       },
       {
-        university: "Rajiv Gandhi University of Knowledge Technologies",
-        qualification: "Bachelor of Technology",
-        years: "2018-2022",
+        university: "ZPP High School",
+        qualification: "10 th Standard",
+        years: "2015-2016",
       },
     ],
   },
@@ -75,16 +89,48 @@ const skillsData = [
     title: "skills",
     data: [
       {
-        name: "HTML, CSS",
+        name: "ReactJS",
+        icon: <RiReactjsFill />,
       },
       {
-        name: "Front-end Development",
+        name: "Javascript",
+        icon: <RiJavascriptFill />,
       },
       {
-        name: "Javascript, ReactJS",
+        name: "HTML5",
+        icon: <RiHtml5Fill />,
       },
       {
-        name: "Back-end Development",
+        name: "CSS3",
+        icon: <RiCss3Fill />,
+      },
+      {
+        name: "NextJS",
+        icon: <TbBrandNextjs />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <BiLogoTailwindCss />,
+      },
+      {
+        name: "TypeScript",
+        icon: <BiLogoTypescript />,
+      },
+      {
+        name: "Redux",
+        icon: <BiLogoRedux />,
+      },
+      {
+        name: "MongoDB",
+        icon: <BiLogoMongodb />,
+      },
+      {
+        name: "Python",
+        icon: <BiLogoPython />,
+      },
+      {
+        name: "SQL",
+        icon: <TbSql />,
       },
     ],
   },
@@ -92,16 +138,16 @@ const skillsData = [
     title: "tools",
     data: [
       {
-        imgPath: "/about/vscode.svg",
+        name: "VS Code",
+        icon: <BiLogoVisualStudio />,
       },
       {
-        imgPath: "/about/figma.svg",
+        name: "Git",
+        icon: <FaGit />,
       },
       {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/wordpress.svg",
+        name: "GitHub",
+        icon: <FaGithub />,
       },
     ],
   },
@@ -111,7 +157,7 @@ const About = () => {
     return arr.find((item) => item.title === title);
   };
   return (
-    <section className="xl:h-[860px] pb-12 py-12 xl:py-24">
+    <section className="xl:h-[900px] pb-12 py-12 xl:py-24 xl:mb-6">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           About Me
@@ -119,8 +165,8 @@ const About = () => {
         <div className="flex flex-col xl:flex-row">
           <div className="hidden xl:flex xl:flex-1 relative">
             <DevImg
-              containerStyles={"bg-no-repeat relative"}
-              imgSrc={"/about/developer.png"}
+              containerStyles={"bg-no-repeat relative w-[500px] h-[500px]"}
+              imgSrc={"/about/aboutme.png"}
             />
           </div>
           <div className="flex-1">
@@ -258,19 +304,22 @@ const About = () => {
                 <TabsContent value="skills">
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-8">What I Use Everyday</h3>
-                    <div className="mb-16">
+                    <div className="mb-12">
                       <h4 className="text-xl font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
                       {/*skills list */}
-                      <div>
+                      <div className="grid grid-cols-2 xl:grid-cols-4 gap-2">
                         {getData(skillsData, "skills").data.map(
                           (item, index) => {
-                            const { name } = item;
+                            const { name, icon } = item;
                             return (
                               <div
                                 key={index}
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0 flex flex-col items-center justify-center"
                               >
+                                <div className="text-6xl text-primary">
+                                  {icon}
+                                </div>
                                 <div className="font-medium">{name}</div>
                               </div>
                             );
@@ -288,16 +337,16 @@ const About = () => {
                       <div className="flex gap-x-8 justify-center xl:justify-start">
                         {getData(skillsData, "tools").data.map(
                           (item, index) => {
-                            const { imgPath } = item;
+                            const { name, icon } = item;
                             return (
-                              <div key={index}>
-                                <Image
-                                  src={imgPath}
-                                  alt="skills-img"
-                                  width={48}
-                                  height={48}
-                                  priority
-                                />
+                              <div
+                                key={index}
+                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0 flex flex-col items-center justify-center"
+                              >
+                                <div className="text-5xl text-primary">
+                                  {icon}
+                                </div>
+                                <div className="font-medium">{name}</div>
                               </div>
                             );
                           }

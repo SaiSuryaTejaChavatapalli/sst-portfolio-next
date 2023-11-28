@@ -3,18 +3,33 @@ import {
   RiYoutubeFill,
   RiGithubFill,
   RiLinkedinFill,
-  RiFacebookFill,
   RiInstagramFill,
+  RiTwitterFill,
 } from "react-icons/ri";
 import Link from "next/link";
-import { type } from "os";
 
 const icons = [
-  { id: 1, path: "/", name: <RiLinkedinFill /> },
-  { id: 2, path: "/", name: <RiGithubFill /> },
-  { id: 3, path: "/", name: <RiYoutubeFill /> },
-  { id: 4, path: "/", name: <RiFacebookFill /> },
-  { id: 5, path: "/", name: <RiInstagramFill /> },
+  {
+    id: 1,
+    path: "https://www.linkedin.com/in/saisuryatejachavatapalli/",
+    name: <RiLinkedinFill />,
+  },
+  {
+    id: 2,
+    path: "https://github.com/SaiSuryaTejaChavatapalli",
+    name: <RiGithubFill />,
+  },
+  { id: 3, path: "https://twitter.com/saisuryateja8", name: <RiTwitterFill /> },
+  {
+    id: 4,
+    path: "https://www.youtube.com/@saisuryatejachavatapalli",
+    name: <RiYoutubeFill />,
+  },
+  {
+    id: 5,
+    path: "https://www.instagram.com/iam_surya_tej?igshid=YTQwZjQ0NmI0OA%3D%3D",
+    name: <RiInstagramFill />,
+  },
 ];
 
 type SocialsProps = {
@@ -26,7 +41,7 @@ const Socials = ({ containerStyles, iconStyles }: SocialsProps) => {
     <div className={`${containerStyles}`}>
       {icons.map((icon) => {
         return (
-          <Link key={icon.id} href={icon.path}>
+          <Link key={icon.id} href={icon.path} target="_blank">
             <div className={`${iconStyles}`}>{icon.name}</div>
           </Link>
         );

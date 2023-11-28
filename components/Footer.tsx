@@ -9,7 +9,7 @@ const Footer = () => {
           iconStyles="text-primary text-[20px] dark:text-white/70 hover:text-white dark:hover:text-primary transition-all"
         />
         <div className="text-muted-foreground">
-          Copyright &copy; Sai Surya Teja Chavatapalli. ALl rights reserved.
+          Copyright &copy; Sai Surya Teja Chavatapalli. All rights reserved.
         </div>
       </div>
     </footer>

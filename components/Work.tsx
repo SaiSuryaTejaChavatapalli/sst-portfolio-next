@@ -75,7 +75,7 @@ const Work = () => {
             obcaecati laborum dolor earum.
           </p>
           <Link href={"/projects"}>
-            <Button>All Projects</Button>
+            <Button>View all Projects</Button>
           </Link>
         </div>
         {/* slider */}

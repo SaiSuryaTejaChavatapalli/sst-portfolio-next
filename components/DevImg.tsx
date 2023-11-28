@@ -6,7 +6,7 @@ const DevImg = ({ containerStyles, imgSrc }) => {
         src={imgSrc}
         alt="hero-img"
         fill
-        className="object-cover"
+        className="object-scale-down"
         priority
       />
     </div>
