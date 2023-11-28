@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
@@ -18,7 +19,7 @@ const ProjectsPage = () => {
       ? project
       : project.category === category;
   });
-  console.log("Filtered Projects", filteredProjects);
+
   return (
     <section className="container min-h-screen pt-12">
       <div className="container mx-auto">
