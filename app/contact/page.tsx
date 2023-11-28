@@ -14,8 +14,7 @@ const ContactPage = () => {
             </div>
             <h1 className="h1 max-w-md mb-8">Let's Connect.</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Temporibus est consequatur nesciunt odit!
+              Share your excitement with me!
             </p>
           </div>
           {/* illustrations */}
@@ -36,14 +35,14 @@ const ContactPage = () => {
               {/* address */}
               <div className="flex items-center gap-x-8">
                 <HomeIcon size={18} className="text-primary" />
-                <div>Hinjewadi, Pune, Maharastra, India</div>
+                <div>Andhra Pradesh,India</div>
               </div>
             </div>
             <div>
               {/* phone */}
               <div className="flex items-center gap-x-8">
                 <PhoneCall size={18} className="text-primary" />
-                <div>+91 9885432575</div>
+                <div>+91 98854 32575</div>
               </div>
             </div>
           </div>
