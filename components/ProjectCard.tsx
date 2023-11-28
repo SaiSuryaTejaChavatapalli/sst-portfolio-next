@@ -16,9 +16,9 @@ type ProjectCardProps = {
 };
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Card className="group overflow-hidden relative">
+    <Card className="group overflow-hidden relative h-[450px] ">
       <CardHeader className="p-0">
-        <div className="relative w-full h-[300px] flex items-center justify-center">
+        <div className="relative w-full h-[240px] flex items-center justify-center">
           <Image
             src={project.image}
             width={350}

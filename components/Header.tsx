@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   const scrollEventFn = () => {
-    window.scrollY > 50 ? setHeader(true) : setHeader(false);
+    window.scrollY >= 50 ? setHeader(true) : setHeader(false);
   };
   useEffect(() => {
     window.addEventListener("scroll", scrollEventFn);

@@ -15,9 +15,9 @@ import ProjectCard from "@/components/ProjectCard";
 import { projectData } from "@/app/_constants/projectsData";
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48">
-      <div className="container mx-auto">
-        <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
+    <section className="mb-12 xl:mb-48 ">
+      <div className="container mx-auto flex flex-col xl:flex-row gap-x-6">
+        <div className="max-w-[500px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle">Come and have a look at the work i did.</p>
           <Link href={"/projects"}>
@@ -25,9 +25,9 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+        <div className="xl:max-w-[1000px] ">
           <Swiper
-            className="h-[480px]"
+            className="pt-2"
             slidesPerView={1}
             breakpoints={{
               640: {
