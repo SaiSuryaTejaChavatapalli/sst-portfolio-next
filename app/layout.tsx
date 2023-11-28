@@ -8,7 +8,10 @@ import { Toaster } from "@/components/ui/toaster";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sai Surya Teja",
+  title: {
+    template: "%s | Sai Surya Teja",
+    default: "Sai Surya Teja Portfolio Application",
+  },
   description: "Created by Sai Surya Teja Chavatapalli.",
 };
 

@@ -10,8 +10,8 @@ const ProjectCard = ({ project }) => {
         <div className="relative w-full h-[300px] flex items-center justify-center">
           <Image
             src={project.image}
-            width={247}
-            height={250}
+            width={350}
+            height={350}
             alt="project-img"
             className="absolute bottom-0 shadow-2xl rounded-lg"
             priority

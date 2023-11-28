@@ -11,6 +11,7 @@ const Logo = () => {
           height={54}
           width={54}
           priority
+          className="dark:bg-primary dark:text-white dark:rounded-full"
         />
       </Link>
     </div>
