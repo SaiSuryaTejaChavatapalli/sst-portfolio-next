@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Web Developer
             </div>
-            <h1 className="mb-4 text-3xl font-bold">Hello, it's me</h1>
+            <h1 className="mb-4 text-3xl font-bold">Hello, it&apos;s me</h1>
             <h1 className="h1 mb-4">Sai Surya Teja.</h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
               An enthusiastic frontend developer, with a passion for crafting
