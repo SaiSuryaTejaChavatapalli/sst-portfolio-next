@@ -26,7 +26,7 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div className="xl:max-w-5xl ">
+        <div className="xl:w-[900px]">
           <Swiper
             className=""
             slidesPerView={1}
