@@ -1,4 +1,13 @@
-export const projectData = [
+type projectDataType = {
+  image: string;
+  link: string;
+  github: string;
+  category: string;
+  name: string;
+  techUsed: string[];
+  description: string;
+};
+export const projectData: projectDataType[] = [
   {
     image: "/projectImages/portfolio-next-p-img.png",
     category: "next js",
@@ -64,7 +73,6 @@ export const projectData = [
       "react player",
       "debouncing",
       "API polling",
-      ,
     ],
     description:
       "Built a YouTube clone and integrated it with the YouTube API.Users can search for videos,watch them in React Player,and interact with features like live streaming and live commenting.Implemented Search with Debouncing,Implemented Live Comments using API polling.",
