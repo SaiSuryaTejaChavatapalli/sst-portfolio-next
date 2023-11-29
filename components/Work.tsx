@@ -49,7 +49,7 @@ const Work = () => {
                   key={index}
                   className="flex flex-col items-center justify-center mb-10"
                 >
-                  <ProjectCard project={project} />
+                  <ProjectCard project={project} ellipsisStyle="line-clamp-5" />
                 </SwiperSlide>
               );
             })}

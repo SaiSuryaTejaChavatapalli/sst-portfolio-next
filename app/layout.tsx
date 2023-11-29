@@ -10,7 +10,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: {
     template: "%s | Sai Surya Teja",
-    default: "Sai Surya Teja Portfolio Application",
+    default: "Sai Surya Teja Portfolio",
   },
   description: "Created by Sai Surya Teja Chavatapalli.",
   icons: {

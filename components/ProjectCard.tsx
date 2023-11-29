@@ -13,10 +13,11 @@ type ProjectCardProps = {
     name: string;
     description: string;
   };
+  ellipsisStyle?: string;
 };
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, ellipsisStyle }: ProjectCardProps) => {
   return (
-    <Card className="group overflow-hidden relative h-[450px] ">
+    <Card className="group relative">
       <CardHeader className="p-0">
         <div className="relative w-full h-[240px] flex items-center justify-center">
           <Image
@@ -45,12 +46,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
+      <div className="px-8 py-6">
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className="text-muted-foreground text-lg">{project.description}</p>
+        <p className={`text-muted-foreground text-lg ${ellipsisStyle}`}>
+          {project.description}
+        </p>
       </div>
     </Card>
   );
