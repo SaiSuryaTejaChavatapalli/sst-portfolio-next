@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     default: "Sai Surya Teja Portfolio Application",
   },
   description: "Created by Sai Surya Teja Chavatapalli.",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

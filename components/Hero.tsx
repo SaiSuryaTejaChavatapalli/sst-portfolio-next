@@ -6,7 +6,7 @@ import Socials from "./Socials";
 import DevImg from "./DevImg";
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-16">
+    <section className="py-12 xl:py-24  xl:pt-16">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-6">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">

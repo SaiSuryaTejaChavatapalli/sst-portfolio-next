@@ -85,5 +85,10 @@
 .swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  @apply bg-primary;
+  @apply text-primary fill-primary stroke-primary;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply !text-primary;
 }

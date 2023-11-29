@@ -7,8 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 //modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 //components
 import ProjectCard from "@/components/ProjectCard";
@@ -25,24 +26,29 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div className="xl:max-w-[1000px] ">
+        <div className="xl:max-w-5xl ">
           <Swiper
-            className="pt-2"
+            className=""
             slidesPerView={1}
             breakpoints={{
               640: {
                 slidesPerView: 2,
               },
             }}
-            navigation
+            navigation={true}
             spaceBetween={30}
-            modules={[Pagination]}
-            pagination={{ clickable: true }}
+            modules={[Pagination, Navigation]}
+            pagination={{
+              type: "fraction",
+            }}
           >
             {/* First four projects */}
             {projectData.slice(0, 4).map((project, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide
+                  key={index}
+                  className="flex flex-col items-center justify-center mb-10"
+                >
                   <ProjectCard project={project} />
                 </SwiperSlide>
               );
