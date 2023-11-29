@@ -11,11 +11,17 @@ type ProjectCardProps = {
     github: string;
     category: string;
     name: string;
+    techUsed: string[];
     description: string;
   };
   ellipsisStyle?: string;
+  showTech?: boolean;
 };
-const ProjectCard = ({ project, ellipsisStyle }: ProjectCardProps) => {
+const ProjectCard = ({
+  project,
+  ellipsisStyle,
+  showTech,
+}: ProjectCardProps) => {
   return (
     <Card className="group relative">
       <CardHeader className="p-0">
@@ -50,6 +56,16 @@ const ProjectCard = ({ project, ellipsisStyle }: ProjectCardProps) => {
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
+        {showTech && (
+          <div className="my-4">
+            {project.techUsed?.map((skill, index) => (
+              <Badge key={index} className="m-1">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        )}
+
         <h4 className="h4 mb-1">{project.name}</h4>
         <p className={`text-muted-foreground text-lg ${ellipsisStyle}`}>
           {project.description}

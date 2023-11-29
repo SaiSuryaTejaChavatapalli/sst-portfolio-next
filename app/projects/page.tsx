@@ -47,7 +47,7 @@ const ProjectsPage = () => {
             {filteredProjects.map((project, index) => {
               return (
                 <TabsContent value={category} key={index}>
-                  <ProjectCard project={project} />
+                  <ProjectCard project={project} showTech={true} />
                 </TabsContent>
               );
             })}
