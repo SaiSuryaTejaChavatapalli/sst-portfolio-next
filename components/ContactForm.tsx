@@ -5,8 +5,14 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import emailjs from "@emailjs/browser";
-import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { useRef } from "react";
+import {
+  User,
+  MailIcon,
+  ArrowRightIcon,
+  MessageSquare,
+  Loader2,
+} from "lucide-react";
+import { useRef, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 type Inputs = {
   customerName: string;
@@ -14,7 +20,8 @@ type Inputs = {
   customerMessage: string;
 };
 const ContactForm = () => {
-  const contactForm = useRef();
+  const [sendLoading, setSendLoading] = useState(false);
+  const contactForm = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
   const {
     register,
@@ -22,6 +29,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setSendLoading(true);
     try {
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -29,10 +37,12 @@ const ContactForm = () => {
         contactForm.current,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
+      setSendLoading(false);
       toast({
         title: "Email Sent Successfully, We will get back to you soon!",
       });
     } catch (error) {
+      setSendLoading(false);
       toast({
         title: "Something went wrong, Please try again!",
       });
@@ -49,7 +59,6 @@ const ContactForm = () => {
       <div className="flex flex-col">
         <div className="relative flex items-center">
           <Input
-            type="name"
             id="name"
             placeholder="Name"
             {...register("customerName", { required: "Name is required" })}
@@ -68,7 +77,6 @@ const ContactForm = () => {
       <div className="flex flex-col">
         <div className="relative flex items-center">
           <Input
-            type="email"
             id="email"
             placeholder="Email"
             {...register("customerEmail", {
@@ -109,6 +117,8 @@ const ContactForm = () => {
       </div>
 
       <Button className="flex items-center gap-x-1 max-w-[166px]">
+        {sendLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+
         <span>Let&apos;s Talk</span>
         <ArrowRightIcon size={20} />
       </Button>

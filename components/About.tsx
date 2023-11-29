@@ -8,16 +8,8 @@ import {
 import DevImg from "./DevImg";
 import { Briefcase, GraduationCap } from "lucide-react";
 
-type qualificationEducation = {
-  title: string;
-  data: {
-    university: string;
-    qualification: string;
-    years: string;
-  }[];
-};
 const About = () => {
-  const getData = (arr, title: string) => {
+  const getData = (arr: AboutGetDataTypes, title: string) => {
     return arr.find((item) => item.title === title);
   };
   return (
@@ -94,12 +86,12 @@ const About = () => {
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <div className="capitalize font-medium">
-                            {getData(qualificationData, "experience").title}
+                            {getData(qualificationData, "experience")?.title}
                           </div>
                         </div>
                         {/* list */}
                         <div className="flex flex-col gap-y-8">
-                          {getData(qualificationData, "experience").data.map(
+                          {getData(qualificationData, "experience")?.data.map(
                             (item, index) => {
                               const { company, role, years } = item;
                               return (
@@ -132,12 +124,12 @@ const About = () => {
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <GraduationCap size={28} />
                           <div className="capitalize font-medium">
-                            {getData(qualificationData, "education").title}
+                            {getData(qualificationData, "education")?.title}
                           </div>
                         </div>
                         {/* list */}
                         <div className="flex flex-col gap-y-8">
-                          {getData(qualificationData, "education").data.map(
+                          {getData(qualificationData, "education")?.data.map(
                             (item, index) => {
                               const { university, qualification, years } = item;
                               return (

@@ -2,12 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const links = [
-  { id: 1, path: "/", name: "home" },
-  { id: 2, path: "/projects", name: "my projects" },
-  { id: 3, path: "/contact", name: "contact" },
-];
+import { navBarLinks } from "@/app/_constants/constants";
 
 type NavbarProps = {
   containerStyles: React.ComponentProps<"div">["className"];
@@ -22,7 +17,7 @@ const Navbar = ({
   const pathname = usePathname();
   return (
     <nav className={`${containerStyles}`}>
-      {links.map((link) => (
+      {navBarLinks?.map((link) => (
         <Link
           href={link.path}
           key={link.id}

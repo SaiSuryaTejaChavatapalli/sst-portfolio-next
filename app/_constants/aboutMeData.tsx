@@ -56,17 +56,17 @@ export const qualificationData = [
     title: "education",
     data: [
       {
-        university: "Rajiv Gandhi University of Knowledge Technologies",
+        university: "Rajiv Gandhi University of Knowledge Technologies, AP.",
         qualification: "Bachelor of Technology",
         years: "2018-2022",
       },
       {
-        university: "Rajiv Gandhi University of Knowledge Technologies",
+        university: "Rajiv Gandhi University of Knowledge Technologies, AP.",
         qualification: "Pre University Course",
         years: "2016-2018",
       },
       {
-        university: "ZPP High School",
+        university: "ZPP High School, AP.",
         qualification: "10 th Standard",
         years: "2015-2016",
       },
