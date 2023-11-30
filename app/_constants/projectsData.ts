@@ -21,7 +21,7 @@ export const projectData: projectDataType[] = [
     ],
     description:
       "Designed and developed a professional portfolio website which can showcase my skills,projects,and achievements.Implemented an intuitive user interface with smooth transitions to create an engaging experience for visitors.Users can contact me through the contact section and I can receive their messages to my Email.",
-    link: "https://swiggy-clone-sai-surya-teja.vercel.app/",
+    link: "https://saisuryatejachavatapalli.vercel.app/",
     github: "https://github.com/SaiSuryaTejaChavatapalli/sst-portfolio-next",
   },
   {
