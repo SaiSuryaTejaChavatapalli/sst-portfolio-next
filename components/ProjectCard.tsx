@@ -67,7 +67,9 @@ const ProjectCard = ({
         )}
 
         <h4 className="h4 mb-1">{project.name}</h4>
-        <p className={`text-muted-foreground text-lg ${ellipsisStyle}`}>
+        <p
+          className={`text-muted-foreground text-lg line-clamp-5 ${ellipsisStyle}`}
+        >
           {project.description}
         </p>
       </div>

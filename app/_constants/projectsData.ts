@@ -41,7 +41,7 @@ export const projectData: projectDataType[] = [
     ],
     description:
       "Developed a Swiggy clone and integrated with swiggy Real world API, which is providing users with a seamless online food ordering experience. Implemented features such as browsing restaurants,browsing menus items of each restaurants,adding and removing items to cart and calculate prices dynamically,contact form to connect with users, Lazy loading and placing orders with toast notifications.",
-    link: "https://swiggy-clone-sai-surya-teja.vercel.app/",
+    link: "https://swiggy-clone-sai-surya-teja-saisuryatejachavatapalli.vercel.app/",
     github: "https://github.com/SaiSuryaTejaChavatapalli/swiggy-clone",
   },
   {
@@ -57,7 +57,7 @@ export const projectData: projectDataType[] = [
     ],
     description:
       "Developed a netflix clone and integrated with MovieDB API, which is providing users with a seamless experience. Implemented features such as browsing movies and view details about specific movie.",
-    link: "https://netflix-gpt-sst.vercel.app/",
+    link: "https://netflix-gpt-sst-saisuryatejachavatapalli.vercel.app/",
     github: "https://github.com/SaiSuryaTejaChavatapalli/netflix-gpt",
   },
   {
